@@ -1,0 +1,21 @@
+.fallback {
+    text-align: center;
+    color: white;
+}
+h1, h2 {
+    text-align: center;
+    color: black!;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+    font-weight: normal;
+    color: #000; /* You can change the color if needed */
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: bold;
+   
+}

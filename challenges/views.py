@@ -28,29 +28,27 @@ challenges = {
 
 
 def index(request):
-  
+
     months = list(challenges.keys())
-   
 
     return render(request, "challenges/index.html", {"months": months})
 
-   
+
 def monthly_challenge(request, month):
-    text = ""
 
     try:
 
         challenge_text = challenges[month]
+        print(challenge_text, "ppppppppppppppls")
 
         return render(
             request,
-            "challenges/challenges.html",
+            "challenges/challenge.html",
             {"text": challenge_text, "month": month},
         )
     except:
         raise Http404()
     # this will redirect to a file names 404.html automatically , but will work when debug=false
-
 
 
 def monthly_challenge_by_number(request, month):
