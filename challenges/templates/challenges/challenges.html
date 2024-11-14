@@ -1,5 +1,11 @@
 {%extends "base.html"%}
 
+{% load static %}
+{% block css_files %}
+<link rel="stylesheet" href="{%static "challenges/includes/header.css"%}">
+{% endblock css_files %}
+
+
 
 {% block page_title%}
  a challenge at  a time 
@@ -7,8 +13,7 @@
 
 {%block content%}
 
-{% include "challenges/includes/header.html" with active_page="challenge" %}
-
+{%include  "challenges/includes/header.html" with active_page="challenge" %}
 
 <h1>{{month|title}} challenge</h1>
     {% if text is not None  %}

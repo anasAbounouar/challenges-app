@@ -41,19 +41,16 @@ def monthly_challenge(request, month):
     try:
 
         challenge_text = challenges[month]
-        # return  render(request, "challenges/challenge.html",{
-        #    "text":challenge_text,'month':month
-        # })
+
         return render(
             request,
-            "challenges/challenge.html",
+            "challenges/challenges.html",
             {"text": challenge_text, "month": month},
         )
-        response_data = f"<h1>{text}</h1>"
-        return HttpResponse(response_data)
     except:
-        #  response_data = render_to_string('404.html')
-        return Http404()
+        raise Http404()
+    # this will redirect to a file names 404.html automatically , but will work when debug=false
+
 
 
 def monthly_challenge_by_number(request, month):

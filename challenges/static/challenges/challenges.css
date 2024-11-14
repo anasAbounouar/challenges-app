@@ -1,3 +1,33 @@
+/* challenges/static/challenges/challenges.css  */
 ul {
-    list-style: none;
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;
+    margin: 0;
+    max-width: 400px; /* Adjust width to your liking */
+    font-family: Arial, sans-serif;
+}
+
+ul li {
+    background-color: #f5f5f5;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+}
+
+ul li:hover {
+    background-color: #e0f7fa; /* Light blue background on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+ul li a:hover {
+    color: #00796b; /* Dark teal color for text on hover */
 }
